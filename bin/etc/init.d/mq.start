@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -f /opt/elasticmq/service.pid ]; then
+    echo "The MQ service seams to be running. Please run the mq.stop command to stop the service first."
+    exit 1
+fi
+
+mkdir -p /var/log/elasticmq
+$(which java) -jar /opt/elasticmq/lib/elasticmq.jar > /var/log/elasticmq/out.log &
+echo $! > /opt/elasticmq/service.pid
+
+exit 0

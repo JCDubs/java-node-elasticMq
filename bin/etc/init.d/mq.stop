@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ ! -f /opt/elasticmq/service.pid ]; then
+    echo "The service.pid file could not be found. Is the Elastic MQ service running?"
+    exit 1
+fi
+
+value=`cat /opt/elasticmq/service.pid`
+kill -9 $value
+rm -rf /opt/elasticmq/service.pid
+
+exit 0
