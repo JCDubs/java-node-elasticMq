@@ -2,9 +2,9 @@
 
 A Docker image providing java, node.js and a running instance of ElasticMq. When started, the container will run an instance of rabbitmq in the background with a CMD of bash. The image is intended to be used as a base image to run any applications that requires Java, Node.js and Elastic MQ. The container will export the 9324, 9325 ports to be mapped to ports on the host. 
 
-JRE Version: 11
-Node Version: 14.17.2
-Elastic MQ Version: 0.14.6
+* JDK Version: 11
+* Node Version: 14.17.3
+* Elastic MQ Version: 0.14.6
 
 ## Starting the MQ service
 
